@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Life Events</title>
+</head>
+<body>
+	<h1>
+		Update "<%= @event.event_name %>" to...
+	</h1>
+
+	<form action="/life_events/<%= @event.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" id="event_name" name="life_event[event_name]" value="<%= @event.event_name %>">
+	<input type="text" id="event_name" name="life_event[event_date]" value="<%= @event.event_date %>">>
+	<input type="submit">
+
+</body>
+</html>

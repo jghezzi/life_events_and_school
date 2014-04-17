@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Life Events</title>
+</head>
+<body>
+	<h1>
+		Delete "<%= @event.event_name %>"?
+	</h1>
+
+	<form action="/life_events/<%= @event.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete">
+
+</body>
+</html>

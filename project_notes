@@ -1,0 +1,8 @@
+Tasks:
+- update gemfile [DONE]
+- bundle install [DONE]
+- create Rakefile [DONE]
+- create config.ru [DONE]
+- create life_events db [DONE]
+- create schools_attended db [DONE]
+- create app file [DONE]

@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Life Events</title>
+</head>
+<body>
+	<h1>
+		<img src="http://dealbreaker.com/uploads/2010/06/animated-siren-gif-animated-siren-gif-animated-siren-gif-drudge-report.gif">		
+		These Are My Life Events
+		<img src="http://dealbreaker.com/uploads/2010/06/animated-siren-gif-animated-siren-gif-animated-siren-gif-drudge-report.gif">
+	</h1>
+
+	<ul>
+		<% @events.each do |event| %>
+		<li><%= event.event_name%>: <%= event.event_date %><a href="/life_events/<%= event.id %>/edit">   Edit</a><a href="/life_events/<%= event.id %>/show">   Delete</a></li>
+		<% end %>
+	</ul>
+
+<button onclick="window.location.href='/new'">Add</button>
+
+</body>
+</html>
