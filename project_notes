@@ -6,3 +6,36 @@ Tasks:
 - create life_events db [DONE]
 - create schools_attended db [DONE]
 - create app file [DONE]
+
+RULES:
+- topic: life events and schools attended (table for each) [DONE]
+- website following CRUD principles outlined in class and below, with corresponding requests and views
+- at least two database tables [DONE]
+- user must be able to search for items by an attribute (for example, if you have a table for school, then user can search for schools by name or maybe by location). the search box can be on the index page, and then the results can either be rendered on the same index page or rendered on another (custom) erb file results.erb (also within your /schools directory - the route would then be '/schools/results')
+
+*views* 
+
+:index => shows static collection of to_dos => GET '/to_dos'
+	#create schools/index and events/index
+
+:show  => shows static member of collection to_dos => GET '/to_dos/:id'
+
+:edit  => page to set up for updating single member => GET '/to_dos/:id/edit'
+
+# your edit form's action will submit a PUT request for the update action
+# PUT '/to_dos/:id'
+	:new   => page to set up creating a single member from a collection
+       => GET '/to_dos/new'
+  # your new form will submit a POST request on the collection
+  # POST '/to_dos'
+
+SINGULAR
+- class names
+- module names
+- variables referring to one instance/record
+- file names (e.g. to_do.rb)
+
+PLURAL
+- database table name (e.g. create_table :favorites)
+- directory names (e.g. views/to_dos)
+- variables referring to a collection or array

@@ -2,20 +2,24 @@
 <head>
 	<title>Life Events</title>
 </head>
+
 <body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+	<div class="jumbotron">
+        <h1>These are my life events</h1>
+        <p></p>
+        <p><button onclick="window.location.href='/new'"class="btn btn-primary btn-lg">add an event »</button>
+        <button onclick="window.location.href='/search'"class="btn btn-primary btn-lg">search »</button></p>
+      </div>
+
 	<h1>
-		<img src="http://dealbreaker.com/uploads/2010/06/animated-siren-gif-animated-siren-gif-animated-siren-gif-drudge-report.gif">		
-		These Are My Life Events
-		<img src="http://dealbreaker.com/uploads/2010/06/animated-siren-gif-animated-siren-gif-animated-siren-gif-drudge-report.gif">
 	</h1>
 
 	<ul>
 		<% @events.each do |event| %>
-		<li><%= event.event_name%>: <%= event.event_date %><a href="/life_events/<%= event.id %>/edit">   Edit</a><a href="/life_events/<%= event.id %>/show">   Delete</a></li>
+		<li class="list-group-item"><%= event.event_name%>: <%= event.event_date %><a href="/life_events/<%= event.id %>/edit" class="btn btn-xs btn-success">   Edit</a><a href="/life_events/<%= event.id %>/show" class="btn btn-xs btn-danger">   Delete</a></li>
 		<% end %>
 	</ul>
-
-<button onclick="window.location.href='/new'">Add</button>
 
 </body>
 </html>

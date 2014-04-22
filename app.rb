@@ -24,7 +24,6 @@ get '/life_events/:id/show' do
 	erb :"life_events/show"
 end
 
-
 get "/new" do
 	erb :"life_events/new"
 end
@@ -32,6 +31,17 @@ end
 get "/edit" do
 	@events = LifeEvent.all
 	erb :"life_events/edit"
+end
+
+get "/search" do
+	@search_results = LifeEvent.where(params[:id])
+	erb :"life_events/search"
+end
+
+post "/search" do
+	puts params
+	@final_results = LifeEvent.where(params[:life_event])
+	erb :"life_events/results"
 end
 
 put "/life_events/:id" do
@@ -50,4 +60,8 @@ delete '/life_events/:id' do
 end
 
 class LifeEvent <ActiveRecord::Base
+	def search
+
+	end
 end
+
